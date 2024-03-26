@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Test</title>
+</head>
+
+<body>
+
+    <header>
+        <div class="">
+            Logo
+        </div>
+        <div class="">
+            navigation
+        </div>
+    </header>
+
+    <main>
+        <section>
+            <h3>Analysising Text</h3>
+            <form>
+                <input id="text" type="text" name="input" placeholder="Enter the Text here">
+                <input type="submit" name="submit" id="submit" value="submit">
+            </form>
+        </section>
+
+        <section>
+            <h4><strong id="title"></strong></h4>
+            <div id="processing_button"></div>
+            <div id="result_code"></div>
+            <div id="result_message"></div>
+            <div id="result_text"></div>
+            <div id="result_subjectivity"></div>
+            <div id="result_confidence"></div>
+            <div id="result_agreement"></div>
+            <div id="result_irony"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>This is a footer</p>
+    </footer>
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/service-worker.js');
+            });
+        }
+    </script>
+</body>
+
+</html>
